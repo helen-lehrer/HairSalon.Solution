@@ -8,12 +8,12 @@
 
  An MVC application for a hair salon that manages salon employees (stylists) and their clients. The user is able to add a list of stylists working at the salon and assign clients to that stylist. The stylists have specific specialties, so each client can only see (belong to) a single stylist (A one-to-many relationship). This application includes:
 
-* A splash pages with options to see all stylists, all clients, or search for a specific stylist or client
-* A Stylists page that contains a link to a page with a form to create a new `Stylist`.
-* Clickable `Stylist` names that go to new page displaying the selected `Stylist` information and list of their assigned `Client`s.
-* A Clients page that contains a link to a page with a form to create a new `Client`.
-* Clickable `Client` names that go to new page displaying the selected `Client` information.
-* All information has Edit, Delete, and Search functionality.
+* A splash page with options to see all `Stylist`s, all `Client`s, or search for a specific `Stylist` or `Client`
+* A `Stylist`s page that contains a link to a page with a form to create a new `Stylist`
+* Clickable `Stylist` names that go to new page displaying the selected `Stylist` details and a dynamic list of their assigned `Client`s
+* A `Client`s page that contains a link to a page with a form to create a new `Client`
+* Clickable `Client` names that go to new page displaying the selected `Client` details
+* All submissions have Edit, Delete, and Search functionality
 
 Features:
 
