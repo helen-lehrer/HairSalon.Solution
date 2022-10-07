@@ -3,14 +3,15 @@
 }
 <h3 class="jumbotron jumbotron-fluid" id="heading">
   Eau Claire's Salon
-  <small class="text-muted">Stylist & Client Management System</small>
+  <br><small class="text-muted">Stylist & Client Management System</small>
 </h3>
 <br>
 <div id="home-lists">
-  @Html.ActionLink("See All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-dark", @id = "see-all-stylists"})
-  @Html.ActionLink("See All Clients", "Index", "Clients", null, new {@class = "btn btn-outline-dark"})
+  @* @Html.ActionLink("See All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-dark", @id = "see-all-stylists"})
+  @Html.ActionLink("See All Clients", "Index", "Clients", null, new {@class = "btn btn-outline-dark"}) *@
 </div>
 <div id="search-box">
+@Html.ActionLink("See All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-dark", @id = "see-all-stylists"})
 @using (Html.BeginForm("Search", "Stylists"))
 {
   <div class="input-group mb-3">
@@ -20,6 +21,7 @@
     </div>
   </div>
 }
+@Html.ActionLink("See All Clients", "Index", "Clients", null, new {@class = "btn btn-outline-dark"})
 @using (Html.BeginForm("Search", "Clients"))
 {
   <div class="input-group mb-3">

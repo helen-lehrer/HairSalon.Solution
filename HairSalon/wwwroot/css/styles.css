@@ -34,12 +34,14 @@ div.content {
 
 body {
   background-color: rgba(255, 220, 184, 0.899);
+  font-family: 'Comfortaa', cursive;
 }
 
 h3#heading {
   padding: 25px;
   background-color: rgba(194, 210, 249, 0.831);
   margin-bottom: 0px;
+  text-align: center;
 }
 
 input {
@@ -52,6 +54,9 @@ div#search-box {
   padding-top: 15px;
   background-color: rgba(194, 210, 249, 0.831);
   text-align: center;
+}
+input.form-control{
+  width: 10px;
 }
 
 div#home-lists {
