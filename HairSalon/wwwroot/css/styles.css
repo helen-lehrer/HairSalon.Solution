@@ -4,10 +4,25 @@ div#footer {
   left:0px;
   width:100%;
   background:#333;
-  padding:8px;
+  padding:20px;
 }
 
 div#footer a {
+  color:#CCC;
+  padding-left: 30px;
+}
+
+div#header {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  background:#333;
+  padding:8px;
+  color:#CCC;
+}
+
+div#header a {
   color:#CCC;
   padding-left: 30px;
 }
