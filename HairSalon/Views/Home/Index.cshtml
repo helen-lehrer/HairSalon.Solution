@@ -1,24 +1,32 @@
 @{
   Layout = "_Layout";
 }
-<h3>
+<h3 class="jumbotron jumbotron-fluid" id="heading">
   Eau Claire's Salon
   <small class="text-muted">Stylist & Client Management System</small>
 </h3>
 <br>
-<h4>Search For A Stylist:</h4>
+<div id="home-lists">
+  @Html.ActionLink("See All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-dark", @id = "see-all-stylists"})
+  @Html.ActionLink("See All Clients", "Index", "Clients", null, new {@class = "btn btn-outline-dark"})
+</div>
+<div id="search-box">
 @using (Html.BeginForm("Search", "Stylists"))
 {
-  @Html.TextBox("Name", null,  new { @class = "form-control" , @placeholder = "Name" })
-  <input type="submit" value="Search" class="btn btn-outline-dark"/>
+  <div class="input-group mb-3">
+    @Html.TextBox("Name", null,  new { @class = "form-control" , @placeholder = "Search For A Stylist" })
+    <div class="input-group-append">
+      <input type="submit" value="Search" class="btn btn-outline-dark"/>
+    </div>
+  </div>
 }
-<h4>Search For A Client:</h4>
 @using (Html.BeginForm("Search", "Clients"))
 {
-  @Html.TextBox("Name", null, new {@class = "form-control" , @placeholder = "Name" })
-  
-  <input type="submit" value="Search" class="btn btn-outline-dark"/>
+  <div class="input-group mb-3">
+    @Html.TextBox("Name", null, new {@class = "form-control" , @placeholder = "Search For A Client" })
+    <div class="input-group-append">
+      <input type="submit" value="Search" class="btn btn-outline-dark"/>
+    </div>
+  </div>
 }
-
-<p>@Html.ActionLink("See All Stylists", "Index", "Stylists", null, new {@class = "btn btn-dark"})</p>
-<p>@Html.ActionLink("See All Clients", "Index", "Clients", null, new {@class = "btn btn-dark"})</p>
+</div>

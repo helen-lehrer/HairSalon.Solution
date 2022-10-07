@@ -4,10 +4,10 @@
 
 @model HairSalon.Models.Client
 
-<h2>Client Details</h2>
+<h3 class="jumbotron jumbotron-fluid" id="heading">Client Details</h3>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
 <h3>Phone Number: @Html.DisplayFor(model => model.PhoneNumber)<h3></h3>
-<p>@Html.ActionLink("Back to Client List", "Index", "Clients", null, new {@class = "btn btn-dark"})</p>
-<p>@Html.ActionLink("Edit Client", "Edit", "Clients", null, new { id = Model.ClientId, @class = "btn btn-dark"})</p>
-<p>@Html.ActionLink("Delete Client", "Delete", "Clients", null, new { id = Model.ClientId, @class = "btn btn-dark"})</p>
+<p>@Html.ActionLink("Back to Client List", "Index", "Clients", null, new {@class = "btn btn-outline-dark"})</p>
+<p>@Html.ActionLink("Edit Client", "Edit", "Clients", null, new { id = Model.ClientId, @class = "btn btn-outline-dark"})</p>
+<p>@Html.ActionLink("Delete Client", "Delete", "Clients", null, new { id = Model.ClientId, @class = "btn btn-outline-dark"})</p>

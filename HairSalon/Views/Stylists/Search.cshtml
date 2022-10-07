@@ -5,7 +5,7 @@ Layout = "_Layout";
 @using HairSalon.Models;
 @model List<HairSalon.Models.Stylist>;
 
-<h1>Search Results</h1>
+<h3 class="jumbotron jumbotron-fluid" id="heading">Search Results</h3>
 
 <ul>
   @foreach(Stylist stylist in Model)
@@ -19,5 +19,5 @@ Layout = "_Layout";
   <p>There are no stylist names that match this search.</p>
 }
 
-<p>@Html.ActionLink("Add New Stylist", "Create", "Stylists", null, new {@class = "btn btn-dark"})</p>
-<p>@Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-dark"})</p>
+<p>@Html.ActionLink("Add New Stylist", "Create", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
+<p>@Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark"})</p>

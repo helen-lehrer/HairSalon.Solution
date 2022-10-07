@@ -4,7 +4,7 @@
 
 @model HairSalon.Models.Stylist
 
-<h4>Add a new Stylist</h4>
+<h3 class="jumbotron jumbotron-fluid" id="heading">Add A New Stylist</h3>
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
@@ -15,4 +15,4 @@
 
   <input type="submit" value="Add New Stylist" class="btn btn-outline-dark" />
 }
-<p>@Html.ActionLink("Show All Stylists", "Index", "Stylists", null, new {@class = "btn btn-dark"})</p>
+<p>@Html.ActionLink("Show All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
