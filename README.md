@@ -41,7 +41,7 @@ Enter this command into your terminal to clone the project:
 $ git clone https://github.com/helen-lehrer/HairSalon.Solution
 ```
 
-Navigate from the root directory of the repo into the folder `HairSalon`:
+Navigate from the root directory of the repo into the production folder `HairSalon`:
 ```bash
 $ cd HairSalon
 ```
@@ -58,30 +58,37 @@ $ dotnet build
 
 ---
 
-#### Follow these instructions to set up **MSTest**:
+#### Follow these instructions to set up an **appsettings.json** file to add a database connection to the app:
 
-Navigate from the root directory of the repo to folder `VendorTracker.Tests`: 
+Navigate from the root directory of the repo into the production folder `HairSalon`:
 ```bash
-$ cd VendorTracker.Tests
+$ cd HairSalon
 ```
 
-Download & install **MSTest**: 
+Create a file called **appsettings.json**: 
 ```bash
-$ dotnet restore
+$ touch appsettings.json
 ```
 
-To run **MSTest**, type this into your command line while you are inside of the VendorTracker.Tests folder: 
+Add the following code to the **appsettings.json** file: 
 ```bash
-$ dotnet test
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=3306;database=helen_lehrer;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
+    }
+}
 ```
+
+* Make sure to insert your MySQL username and password into the  **appsettings.json**  connection string
+* Note that the database will change based on the database you are connecting to and that uid and pwd may vary depending on your MySql configurations.
 
 ---
 
 #### To run the application: 
 
-Navigate from the root directory of the repo into the folder `VendorTracker`:
+Navigate from the root directory of the repo into the folder `HairSalon`:
 ```bash
-$ cd VendorTracker
+$ cd HairSalon
 ```
 
 Run the application:
@@ -91,7 +98,7 @@ $ dotnet run
 
 ## Known Bugs
 
-* While using the search order functionality, if the title doesn't exist, the application breaks
+* The search functionality is case sensitive
 
 ## License
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
