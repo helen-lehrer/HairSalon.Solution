@@ -1,17 +1,17 @@
-// using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
-// namespace BestRestaurants.Models
-// {
-//   public class BestRestaurantsContext : DbContext
-//   {
-//     public DbSet<Cuisine> Cuisines { get; set; }
-//     public DbSet<Restaurant> Restaurants { get; set; }
+namespace HairSalon.Models
+{
+  public class HairSalonContext : DbContext
+  {
+    // public DbSet<Cuisine> Cuisines { get; set; }
+    // public DbSet<Restaurant> Restaurants { get; set; }
 
-//     public BestRestaurantsContext(DbContextOptions options) : base(options) { }
+    // public HairSalonContext(DbContextOptions options) : base(options) { }
 
-//     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//     {
-//       optionsBuilder.UseLazyLoadingProxies();
-//     }
-//   }
-// }
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // {
+    //   optionsBuilder.UseLazyLoadingProxies();
+    // }
+  }
+}
