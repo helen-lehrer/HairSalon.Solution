@@ -3,11 +3,18 @@
 }
 <h1>Eau Claire's Salon</h1>
 <br>
-<h4>Search For A Client By Name:</h4>
+<h4>Search For A Stylist:</h4>
 @using (Html.BeginForm("Search", "Clients"))
 {
-  @Html.TextBox("Name")
+  @Html.TextBox("Name", null,  new { @class = "form-control" , @placeholder = "Name" })
   <input type="submit" value="Search" />
 }
+<h4>Search For A Client:</h4>
+@using (Html.BeginForm("Search", "Clients"))
+{
+  @Html.TextBox("Name", null, new {@class = "form-control" , @placeholder = "Name" })
+  <input type="submit" value="Search" />
+}
+
 <p>@Html.ActionLink("See All Stylists", "Index", "Stylists")</p>
 <p>@Html.ActionLink("See All Clients", "Index", "Clients")</p>
