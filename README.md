@@ -23,7 +23,7 @@ Features:
 * Use of MySQL for database management
 * GET and POST requests
 * MVC routes follow RESTful conventions
-* Search order functionality
+* Search functionalities
 
 ## Technologies Used
 
