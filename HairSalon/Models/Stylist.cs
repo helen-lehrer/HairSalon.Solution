@@ -4,13 +4,13 @@ namespace HairSalon.Models
 {
   public class Stylist
   {
-//     public Cuisine()
-//     {
-//       this.Restaurants = new HashSet<Restaurant>();
-//     }
+    public Stylist()
+    {
+      this.Stylists = new HashSet<Stylist>();
+    }
 
-//     public int CuisineId { get; set; }
-//     public string TypeOf { get; set; }
-//     public virtual ICollection<Restaurant> Restaurants { get; set; }
+    public int StylistId { get; set; }
+    public string Speciality { get; set; }
+    public virtual ICollection<Restaurant> Stylists { get; set; }
   }
 }
