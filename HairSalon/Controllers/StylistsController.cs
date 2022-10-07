@@ -21,49 +21,49 @@ namespace HairSalonControllers
       return View(model);
     }
 
-    // public ActionResult Create()
-    // {
-    //   return View();
-    // }
+    public ActionResult Create()
+    {
+      return View();
+    }
 
-    // [HttpPost]
-    // public ActionResult Create(Stylist cuisine)
-    // {
-    //   _db.Stylists.Add(cuisine);
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Index");
-    // }
+    [HttpPost]
+    public ActionResult Create(Stylist stylist)
+    {
+      _db.Stylists.Add(stylist);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
 
     // public ActionResult Details(int id)
     // {
-    //   Stylist thisRestaurant = _db.Stylists.FirstOrDefault(cuisine => cuisine.StylistId == id);
+    //   Stylist thisRestaurant = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
     //   return View(thisRestaurant);
     // }
 
     // public ActionResult Edit(int id)
     // {
-    //   Stylist thisStylist = _db.Stylists.FirstOrDefault(cuisine => cuisine.StylistId == id);
+    //   Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
     //   return View(thisStylist);
     // }
 
     // [HttpPost]
-    // public ActionResult Edit(Stylist cuisine)
+    // public ActionResult Edit(Stylist stylist)
     // {
-    //   _db.Entry(cuisine).State = EntityState.Modified;
+    //   _db.Entry(stylist).State = EntityState.Modified;
     //   _db.SaveChanges();
     //   return RedirectToAction("Index");
     // }
 
     // public ActionResult Delete(int id)
     // {
-    //   Stylist thisStylist = _db.Stylists.FirstOrDefault(cuisine => cuisine.StylistId == id);
+    //   Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
     //   return View(thisStylist);
     // }
 
     // [HttpPost, ActionName("Delete")]
     // public ActionResult DeleteConfirmed(int id)
     // {
-    //   Stylist thisStylist = _db.Stylists.FirstOrDefault(cuisine => cuisine.StylistId == id);
+    //   Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
     //   _db.Stylists.Remove(thisStylist);
     //   _db.SaveChanges();
     //   return RedirectToAction("Index");
