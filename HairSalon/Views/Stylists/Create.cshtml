@@ -13,6 +13,6 @@
   @Html.LabelFor(model => model.Speciality)
   @Html.TextBoxFor(model => model.Speciality)
 
-  <input type="submit" value="Add new stylist" />
+  <input type="submit" value="Add new stylist" class="btn btn-outline-dark" />
 }
-<p>@Html.ActionLink("Show All Stylists", "Index")</p>
+<p>@Html.ActionLink("Show All Stylists", "Index", new {@class = "action-link"})</p>

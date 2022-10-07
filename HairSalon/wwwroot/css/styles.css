@@ -9,7 +9,7 @@ div#footer {
 
 div#footer a {
   color:#CCC;
-  padding-left: 30px;
+  padding-left: 50px;
 }
 
 div#header {
@@ -24,5 +24,15 @@ div#header {
 
 div#header a {
   color:#CCC;
-  padding-left: 30px;
+  padding-left: 8%;
+  padding-right: 5%;
 }
+
+div.content {
+  padding-top: 55px;
+}
+
+input {
+  margin-bottom: 20px;
+}
+

@@ -16,6 +16,6 @@
     <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</li>
   }
 </ul>
-<p>@Html.ActionLink("Back To Stylist List", "Index")</p>
-<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
-<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
+<p>@Html.ActionLink("Back To Stylist List", "Index", null, new {@class = "btn btn-dark"})</p>
+<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId, @class = "btn btn-dark"})</p>
+<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId, @class = "btn btn-dark"})</p>
