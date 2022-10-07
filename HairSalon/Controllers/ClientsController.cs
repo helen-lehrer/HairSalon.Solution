@@ -1,75 +1,75 @@
-// using Microsoft.AspNetCore.Mvc;
-// using BestRestaurants.Models;
-// using System.Collections.Generic;
-// using System.Linq;
-// using Microsoft.EntityFrameworkCore;
-// using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc;
+using HairSalon.Models;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
-// namespace BestRestaurants.Controllers
-// {
-//   public class RestaurantsController : Controller
-//   {
-//     private readonly BestRestaurantsContext _db;
+namespace HairSalon.Controllers
+{
+  public class ClientsController : Controller
+  {
+    private readonly HairSalonContext _db;
 
-//     public RestaurantsController(BestRestaurantsContext db)
-//     {
-//       _db = db;
-//     }
+    public ClientsController(HairSalonContext db)
+    {
+      _db = db;
+    }
 
-//     public ActionResult Index()
-//     {
-//       List<Restaurant> model = _db.Restaurants.Include(restaurant => restaurant.Cuisine).ToList();
-//       return View(model);
-//     }
+    public ActionResult Index()
+    {
+      List<Client> model = _db.Clients.Include(client => client.Stylist).ToList();
+      return View(model);
+    }
 
 //     public ActionResult Create()
 //     {
-//       ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "TypeOf");
+//       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "TypeOf");
 //       return View();
 //     }
 
 //     [HttpPost]
-//     public ActionResult Create(Restaurant restaurant)
+//     public ActionResult Create(Client client)
 //     {
-//       _db.Restaurants.Add(restaurant);
+//       _db.Clients.Add(client);
 //       _db.SaveChanges();
 //       return RedirectToAction("Index");
 //     }
 
 //     public ActionResult Details(int id)
 //     {
-//       Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
-//       return View(thisRestaurant);
+//       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+//       return View(thisClient);
 //     }
 
 //     public ActionResult Edit(int id)
 //     {
-//       Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
-//       ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name");
-//       return View(thisRestaurant);
+//       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+//       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
+//       return View(thisClient);
 //     }
 
 //     [HttpPost]
-//     public ActionResult Edit(Restaurant restaurant)
+//     public ActionResult Edit(Client client)
 //     {
-//       _db.Entry(restaurant).State = EntityState.Modified;
+//       _db.Entry(client).State = EntityState.Modified;
 //       _db.SaveChanges();
 //       return RedirectToAction("Index");
 //     }
 
 //     public ActionResult Delete(int id)
 //     {
-//       Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
-//       return View(thisRestaurant);
+//       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+//       return View(thisClient);
 //     }
 
 //     [HttpPost, ActionName("Delete")]
 //     public ActionResult DeleteConfirmed(int id)
 //     {
-//       Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
-//       _db.Restaurants.Remove(thisRestaurant);
+//       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+//       _db.Clients.Remove(thisClient);
 //       _db.SaveChanges();
 //       return RedirectToAction("Index");
 //     }
-//   }
-// }
+  }
+}
