@@ -68,5 +68,19 @@ namespace HairSalonControllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult Search(string Name)
+    {
+      List<Stylist> model = _db.Stylists.ToList();
+      List<Stylist> filteredList = new List<Stylist>();
+      foreach (Stylist stylist in model)
+      {
+        if (stylist.Name == Name)
+        {
+          filteredList.Add(stylist);
+        }
+      }
+      return View(filteredList);
+    }
   }
 }

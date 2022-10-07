@@ -75,7 +75,6 @@ namespace HairSalon.Controllers
     public ActionResult Search(string Name)
     {
       List<Client> model = _db.Clients.Include(client => client.Stylist).ToList();
-      // List<Client> sortedList = model.OrderBy(client=>client.Name).ToList();
       List<Client> filteredList = new List<Client>();
       foreach (Client client in model)
       {

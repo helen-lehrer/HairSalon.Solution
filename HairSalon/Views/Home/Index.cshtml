@@ -4,7 +4,7 @@
 <h1>Eau Claire's Salon</h1>
 <br>
 <h4>Search For A Stylist:</h4>
-@using (Html.BeginForm("Search", "Clients"))
+@using (Html.BeginForm("Search", "Stylists"))
 {
   @Html.TextBox("Name", null,  new { @class = "form-control" , @placeholder = "Name" })
   <input type="submit" value="Search" />
