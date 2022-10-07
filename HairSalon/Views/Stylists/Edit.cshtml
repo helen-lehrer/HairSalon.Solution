@@ -1,20 +1,23 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
-@model BestRestaurants.Models.Cuisine
+@model HairSalon.Models.Stylist
 
 <h2>Edit</h2>
 
-<h4>Edit this cuisine: @Html.DisplayFor(model => model.TypeOf)</h4>
+<h4>Edit this stylist: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.CuisineId)
+  @Html.HiddenFor(model => model.StylistId)
 
-  @Html.LabelFor(model => model.TypeOf)
-  @Html.EditorFor(model => model.TypeOf)
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+
+  @Html.LabelFor(model => model.Speciality)
+  @Html.EditorFor(model => model.Speciality)
 
   <input type="submit" value="Save" />
 }
-<p>@Html.ActionLink("Back to list", "Index")</p> *@
+<p>@Html.ActionLink("Back to list", "Index")</p>
