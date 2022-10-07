@@ -1,21 +1,21 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
-@model BestRestaurants.Models.Restaurant
+@model HairSalon.Models.Client
 
-<h4>Add a new restaurant</h4>
+<h4>Add a new client</h4>
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name)
 
-  @Html.LabelFor(model => model.Hours)
-  @Html.TextBoxFor(model => model.Hours)
+  @Html.LabelFor(model => model.PhoneNumber)
+  @Html.TextBoxFor(model => model.PhoneNumber)
 
-  @Html.LabelFor(model => model.Cuisine)
-  @Html.DropDownList("CuisineId")
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
 
-  <input type="submit" value="Add new restaurant" class="btn btn-default"/>
+  <input type="submit" value="Add new client"/>
 }
-<p>@Html.ActionLink("Show all restaurants", "Index")</p> *@
+<p>@Html.ActionLink("Show all clients", "Index")</p>
