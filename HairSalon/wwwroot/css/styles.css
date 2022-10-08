@@ -20,6 +20,7 @@ div#header {
   background:#343a40;
   padding:8px;
   color:#CCC;
+  text-align: center;
 }
 
 div#header a {
@@ -34,14 +35,18 @@ div.content {
 
 body {
   background-color: rgba(255, 220, 184, 0.899);
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h3#heading {
-  padding: 25px;
-  background-color: rgba(194, 210, 249, 0.831);
+  padding: 10px;
+  background-color: rgba(68, 100, 181, 0.831);
   margin-bottom: 0px;
   text-align: center;
+  font-family: 'Gruppo', cursive;
+  font-weight: semi-bold;
+  font-size: 400%;
+  color:aliceblue;
 }
 
 input {
