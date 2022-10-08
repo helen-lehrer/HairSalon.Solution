@@ -56,9 +56,10 @@ input {
 
 div#search-box {
   padding: 15px;
-  padding-top: 15px;
+  padding-top: 50px;
   background-color: rgba(194, 210, 249, 0.831);
   text-align: center;
+  margin-top: 20px;
 }
 input.form-control{
   width: 10px;
