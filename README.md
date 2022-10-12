@@ -58,7 +58,19 @@ $ dotnet build
 
 ---
 
-#### Follow these instructions to set up an **appsettings.json** file to add a database connection to the app:
+#### Database Import/Configuration:
+
+* Download, install, and configure [MySQL](https://dev.mysql.com/downloads/installer/) & [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+
+* In MySQL Workbench, In the Navigator>Administration window, select "Data Import/Restore"
+
+* In Import Options, select "Import from Self-Contained File"
+
+* In the field next to this, type "[directory repo was cloned into]/HairSalon.Solution/helen_lehrer.sql". 
+
+* Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
+
+After you are finished with the above steps, reopen the Navigator > Schemas tab. Right click and select Refresh All. The database helen_lehrer will appear. Next, you will create an **appsettings.json** file.
 
 Navigate from the root directory of the repo into the production folder `HairSalon`:
 ```bash
@@ -80,6 +92,7 @@ Add the following code to the **appsettings.json** file:
 ```
 
 * Make sure to insert your MySQL username and password into the  **appsettings.json**  connection string
+
 * Note that the database will change based on the database you are connecting to and that uid and pwd may vary depending on your MySql configurations.
 
 ---
