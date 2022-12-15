@@ -3,21 +3,23 @@
 }
 
 @model HairSalon.Models.Stylist
+<div class="app__container">
+  <h3 id="heading">Edit</h3>
+  <img src="~/images/stylist.png" class="icons" />
 
-<h3 class="jumbotron jumbotron-fluid" id="heading">Edit</h3>
+  <h4>You are editing this stylist: @Html.DisplayFor(model => model.Name)</h4>
 
-<h4>Edit this stylist: @Html.DisplayFor(model => model.Name)</h4>
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.StylistId)
 
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.StylistId)
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
 
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
+    @Html.LabelFor(model => model.Speciality)
+    @Html.EditorFor(model => model.Speciality)
 
-  @Html.LabelFor(model => model.Speciality)
-  @Html.EditorFor(model => model.Speciality)
-
-  <input type="submit" value="Save" class="btn btn-outline-dark"/>
-}
-<p>@Html.ActionLink("Back To Stylist List", "Index", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
+    <input type="submit" value="Save" class="btn btn-outline-dark"/>
+  }
+  <p>@Html.ActionLink("Back To Stylist List", "Index", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
+  </div>

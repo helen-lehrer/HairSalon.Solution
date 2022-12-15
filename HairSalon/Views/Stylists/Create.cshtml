@@ -3,16 +3,19 @@
 }
 
 @model HairSalon.Models.Stylist
+<div class="app__container">
+  <h3 id="heading">Add A New Stylist</h3>
+   <img src="~/images/stylist.png" class="icons" />
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
 
-<h3 class="jumbotron jumbotron-fluid" id="heading">Add A New Stylist</h3>
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.Speciality)
+    @Html.TextBoxFor(model => model.Speciality)
 
-  @Html.LabelFor(model => model.Speciality)
-  @Html.TextBoxFor(model => model.Speciality)
+    <input type="submit" value="Add New Stylist" class="btn btn-outline-dark" />
+  }
 
-  <input type="submit" value="Add New Stylist" class="btn btn-outline-dark" />
-}
-<p>@Html.ActionLink("Show All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
+  <p>@Html.ActionLink("Show All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
+</div>

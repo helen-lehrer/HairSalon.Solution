@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 <div id="search-box">
-  <img src="~/images/stylist.png" />
+  <img src="~/images/stylist.png" class="icons"/>
   @Html.ActionLink("See All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-secondary", @id = "see-all-stylists"})
 
   @using (Html.BeginForm("Search", "Stylists"))
@@ -15,7 +15,7 @@
     </div>
   }
 
-  <img src="~/images/client.png" />
+  <img src="~/images/client.png" class="icons" />
   @Html.ActionLink("See All Clients", "Index", "Clients", null, new {@class = "btn btn-outline-secondary"})
 
   @using (Html.BeginForm("Search", "Clients"))

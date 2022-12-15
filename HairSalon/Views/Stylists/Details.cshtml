@@ -4,18 +4,20 @@
 
 @model HairSalon.Models.Stylist
 @using HairSalon.Models;
-
-<h3 class="jumbotron jumbotron-fluid" id="heading">Stylist Details</h3>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<h3>@Html.DisplayNameFor(model => model.Speciality): @Html.DisplayFor(model => model.Speciality)</h3>
-<h3>Clients:</h3>
-<ul>
-  @foreach(Client client in Model.Clients)
-   {
-    <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</li>
-  }
-</ul>
-<p>@Html.ActionLink("Back To Stylist List", "Index", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
-<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId}, new {  @class = "btn btn-outline-dark" })</p>
-<p>@Html.ActionLink("Delete Stylist", "Delete", null, new { id = Model.StylistId }, new { @class = "btn btn-outline-dark" })</p>
+<div class="app__container">
+  <h3 id="heading">Stylist Details</h3>
+  <img src="~/images/stylist.png" class="icons" />
+  <hr />
+  <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+  <h3>@Html.DisplayNameFor(model => model.Speciality): @Html.DisplayFor(model => model.Speciality)</h3>
+  <h3>Clients:</h3>
+  <ul>
+    @foreach(Client client in Model.Clients)
+    {
+      <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</li>
+    }
+  </ul>
+  <p>@Html.ActionLink("Back To Stylist List", "Index", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
+  <p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId}, new {  @class = "btn btn-outline-dark" })</p>
+  <p>@Html.ActionLink("Delete Stylist", "Delete", null, new { id = Model.StylistId }, new { @class = "btn btn-outline-dark" })</p>
+<div class="app__container">
