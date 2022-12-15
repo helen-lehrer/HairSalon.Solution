@@ -6,7 +6,7 @@
   @using (Html.BeginForm("Search", "Stylists"))
   {
     <div class="input-group mb-3">
-      @Html.TextBox("Name", null,  new { @class = "form-control" , @placeholder = "Search For A Stylist" })
+      @Html.TextBox("Name", null,  new { @class = "form-control", @placeholder = "Search For A Stylist" })
       <div class="input-group-append">
         <input type="submit" value="Search" class="btn btn-outline-dark"/>
       </div>
@@ -16,7 +16,7 @@
   @using (Html.BeginForm("Search", "Clients"))
   {
     <div class="input-group mb-3">
-      @Html.TextBox("Name", null, new {@class = "form-control" , @placeholder = "Search For A Client" })
+      @Html.TextBox("Name", null, new { @class = "form-control", @placeholder = "Search For A Client" })
       <div class="input-group-append">
         <input type="submit" value="Search" class="btn btn-outline-dark"/>
       </div>
