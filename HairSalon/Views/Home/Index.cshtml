@@ -2,23 +2,28 @@
   Layout = "_Layout";
 }
 <div id="search-box">
-  @Html.ActionLink("See All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-dark", @id = "see-all-stylists"})
+  <img src="~/images/stylist.png" />
+  @Html.ActionLink("See All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-secondary", @id = "see-all-stylists"})
+
   @using (Html.BeginForm("Search", "Stylists"))
   {
     <div class="input-group mb-3">
       @Html.TextBox("Name", null,  new { @class = "form-control", @placeholder = "Search For A Stylist" })
       <div class="input-group-append">
-        <input type="submit" value="Search" class="btn btn-outline-dark"/>
+        <input type="submit" value="Search" class="btn btn-outline-secondary"/>
       </div>
     </div>
   }
-  @Html.ActionLink("See All Clients", "Index", "Clients", null, new {@class = "btn btn-outline-dark"})
+
+  <img src="~/images/client.png" />
+  @Html.ActionLink("See All Clients", "Index", "Clients", null, new {@class = "btn btn-outline-secondary"})
+
   @using (Html.BeginForm("Search", "Clients"))
   {
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 col-sm-*">
       @Html.TextBox("Name", null, new { @class = "form-control", @placeholder = "Search For A Client" })
       <div class="input-group-append">
-        <input type="submit" value="Search" class="btn btn-outline-dark"/>
+        <input type="submit" value="Search" class="btn btn-outline-secondary"/>
       </div>
     </div>
   }

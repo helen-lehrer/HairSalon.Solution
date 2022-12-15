@@ -5,14 +5,14 @@
 @using HairSalon.Models;
 @model List<HairSalon.Models.Stylist>;
 
-<h3 class="jumbotron jumbotron-fluid" id="heading">Stylists</h3>
-
-<ul>
-  @foreach(Stylist stylist in Model)
-  {
-    <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
-  }
-</ul>
-
-<p>@Html.ActionLink("Add New Stylist", "Create", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
-<p>@Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark"})</p>
+<div id="stylists-index">
+  <h3 id="heading">Stylists</h3>
+  <ul>
+    @foreach(Stylist stylist in Model)
+    {
+      <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
+    }
+  </ul>
+  <p>@Html.ActionLink("Add New Stylist", "Create", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
+  <p>@Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark"})</p>
+</div>
