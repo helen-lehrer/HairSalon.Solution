@@ -71,15 +71,8 @@ namespace HairSalonControllers
 
     public ActionResult Search(string Name)
     {
-      List<Stylist> model = _db.Stylists.ToList();
-      List<Stylist> filteredList = new List<Stylist>();
-      foreach (Stylist stylist in model)
-      {
-        if (stylist.Name == Name)
-        {
-          filteredList.Add(stylist);
-        }
-      }
+      List<Stylist> filteredList = _db.Stylists.Where(model => model.Name.ToLower().Contains(Name.ToLower())).ToList();
+
       return View(filteredList);
     }
   }
