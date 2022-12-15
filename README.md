@@ -66,7 +66,9 @@ $ dotnet build
 
 * In Import Options, select "Import from Self-Contained File"
 
-* In the field next to this, type "[directory repo was cloned into]/HairSalon.Solution/helen_lehrer.sql". 
+* In the field next to this, navigate to or type "[directory repo was cloned into]/HairSalon.Solution/helen_lehrer.sql". 
+
+* In 'Default Schema to be Imported To', create a new Default Target Schema name called helen_lehrer. 
 
 * Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
 

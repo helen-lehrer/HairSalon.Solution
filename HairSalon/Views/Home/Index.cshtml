@@ -1,8 +1,6 @@
 @{
   Layout = "_Layout";
 }
-<h3 class="jumbotron jumbotron-fluid" id="heading">
-  Eau   Claire's   Salon</h3>
 <div id="search-box">
   @Html.ActionLink("See All Stylists", "Index", "Stylists", null, new {@class = "btn btn-outline-dark", @id = "see-all-stylists"})
   @using (Html.BeginForm("Search", "Stylists"))
