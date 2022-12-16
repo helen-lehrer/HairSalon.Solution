@@ -5,15 +5,17 @@ Layout = "_Layout";
 @using HairSalon.Models;
 @model List<HairSalon.Models.Client>;
 
-<h3 class="jumbotron jumbotron-fluid" id="heading">Clients</h3>
+<div class="app__container">
+  <h3 id="heading">Clients</h3>
 
-<ul>
-  @foreach(Client client in Model)
-  {
-    <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylist.Name</li>
-  }
-</ul>
+  <ul>
+    @foreach(Client client in Model)
+    {
+      <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylist.Name</li>
+    }
+  </ul>
 
-<p>@Html.ActionLink("Add New Client", "Create", "Clients", null, new { @class = "btn btn-outline-dark" })</p>
+  <p>@Html.ActionLink("Add New Client", "Create", "Clients", null, new { @class = "btn btn-outline-dark" })</p>
 
-<p>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-outline-dark" })</p>
+  <p>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-outline-dark" })</p>
+</div>

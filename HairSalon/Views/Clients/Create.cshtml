@@ -3,19 +3,20 @@
 }
 
 @model HairSalon.Models.Client
+<div class="app__container">
+  <h3 id="heading">Add A New Client</h3>
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
 
-<h3 class="jumbotron jumbotron-fluid" id="heading">Add A New Client</h3>
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.PhoneNumber)
+    @Html.TextBoxFor(model => model.PhoneNumber)
 
-  @Html.LabelFor(model => model.PhoneNumber)
-  @Html.TextBoxFor(model => model.PhoneNumber)
+    @Html.LabelFor(model => model.Stylist)
+    @Html.DropDownList("StylistId")
 
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
-
-  <input type="submit" value="Add New Client" class="btn btn-outline-dark"/>
-}
-<p>@Html.ActionLink("Show All Clients", "Index", "Clients", null, new {@class = "btn btn-outline-dark"})</p>
+    <input type="submit" value="Add New Client" class="btn btn-outline-dark"/>
+  }
+  <p>@Html.ActionLink("Show All Clients", "Index", "Clients", null, new {@class = "btn btn-outline-dark"})</p>
+</div>
