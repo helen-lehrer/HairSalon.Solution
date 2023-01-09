@@ -26,7 +26,7 @@ namespace HairSalon
 
       services.AddEntityFrameworkMySql()
         .AddDbContext<HairSalonContext>(options => options
-        .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
+        .UseMySql(Configuration["ConnectionStrings:AZURE_MYSQL_CONNECTIONSTRING"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:AZURE_MYSQL_CONNECTIONSTRING"])));
     }
 
     public void Configure(IApplicationBuilder app)

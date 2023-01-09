@@ -21,6 +21,10 @@ body {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
+.app__container-list {
+  text-align: center;
+}
+
 #heading {
   color: #006D77;
   margin-bottom: 0px;
@@ -107,7 +111,6 @@ div.content {
 div#home-lists {
   display: center;
   padding-bottom: 20px;
-  /* text-align: center; */
 }
 
 ul li a {
@@ -117,6 +120,8 @@ ul li a {
 }
 
 ul {
-  margin: 20px;
   list-style: none;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
 }

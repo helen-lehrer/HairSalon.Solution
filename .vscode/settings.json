@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/81515a8a-9ceb-4e59-8f0f-9de660f24877/AppServices/subscriptions/81515a8a-9ceb-4e59-8f0f-9de660f24877/resourceGroups/hair-salon-rg/providers/Microsoft.Web/sites/hair-salon-app",
+  "appService.deploySubpath": "HairSalon\\bin\\Release\\net5.0\\publish"
+}

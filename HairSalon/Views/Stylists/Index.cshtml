@@ -7,13 +7,14 @@
 <div class="app__container">
     <img src="~/images/stylist.png" class="icons" />
     <h3 id="heading">Stylists</h3>
-    <ul>
-      @foreach(Stylist stylist in Model)
-      {
-        <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
-      }
-    </ul>
-    <p>@Html.ActionLink("Add New Stylist", "Create", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
-    <p>@Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark"})</p>
+    <div class="app__container-list">
+      <ul>
+        @foreach(Stylist stylist in Model)
+        {
+          <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
+        }
+      </ul>
+      <p>@Html.ActionLink("Add New Stylist", "Create", "Stylists", null, new {@class = "btn btn-outline-dark"})</p>
+      <p>@Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark"})</p>
   </div>
 </div>
